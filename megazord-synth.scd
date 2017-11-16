@@ -130,7 +130,7 @@
 {
 	var c;
 	s.bootSync(c);
-	~path = "/Users/tomerbaruch/Music/SuperCollider/Standalone-Synth/";
+	~path = ~path ? "/Users/tomerbaruch/Music/SuperCollider/Standalone-Synth/";
 	~waveTables=(~path++"AKWF_nes/*").pathMatch.collect({|file| Buffer.read(s, file)});
 
 	SynthDef(\wavetab1, {|rate=1, gate=1, bufnum, amp=0.2|
