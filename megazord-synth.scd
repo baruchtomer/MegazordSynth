@@ -129,6 +129,7 @@
 
 {
 	var c;
+	Server.local.options.sampleRate=48000;
 	s.bootSync(c);
 	~path = ~path ? "/Users/tomerbaruch/Music/SuperCollider/Standalone-Synth/";
 	~waveTables=(~path++"AKWF_nes/*").pathMatch.collect({|file| Buffer.read(s, file)});
@@ -181,7 +182,7 @@
 
 	);
 	//~amps=[0.25,0,0.5,1];
-	~playFunc = {|note| Synth(\wavetab1, [\bufnum, ~waveTables[~st.currentWave], \rate, (note-50).midiratio*rrand(1-~st.jitter, 1+~st.jitter), \amp, 0.3])};
+	~playFunc = {|note| Synth(\wavetab1, [\bufnum, ~waveTables[~st.currentWave], \rate, (note-50).midiratio*rrand(1-~st.jitter, 1+~st.jitter)*0.91875, \amp, 0.3])};
 	~stopFunc = {|note| note.set(\gate, 0); nil};
 	~beats = [2, 1.5, 1, 0.75, 2/3, 0.5, 1/3, 1/4, 1/5, 1/6, 1/8, 1/10, 1/12, 1/16, 1/24, 1/32];
 	~filter.free;
