@@ -16,6 +16,7 @@ It can be done either by changing the ~path inside the megazord-synth.scd or by 
 The content of that file should look like this:
 
 (
+
 ~path = "/Users/tomerbaruch/Music/SuperCollider/MegazordSynth/"; //for example
 
 (~path++"megazord-synth.scd").loadPaths;
