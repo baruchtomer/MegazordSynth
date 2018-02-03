@@ -1,5 +1,12 @@
 (
-
+//
+// MEGAZORD SYNTH by Tomer Baruch
+//
+// Based on NES waveforms by Adventure Kid.
+// Originally written to work on a Raspberry Pi 3 with a Pisound interface and Novation Launchkey mini Midi Controller.
+//
+// github.com/baruchtomer
+//
 ~setControls = {
 	~delay.free; ~delay=nil;
 	~setArp = {
