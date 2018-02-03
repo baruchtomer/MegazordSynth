@@ -138,7 +138,7 @@
 	var c;
 	Server.local.options.sampleRate=48000;
 	s.bootSync(c);
-	~path = ~path ? "/Users/tomerbaruch/Music/SuperCollider/Standalone-Synth/";
+	~path = ~path ? "/Users/tomerbaruch/Music/SuperCollider/MegazordSynth/";
 	~waveTables=(~path++"AKWF_nes/*").pathMatch.collect({|file| Buffer.read(s, file)});
 
 	SynthDef(\wavetab1, {|rate=1, gate=1, bufnum, amp=0.2|
